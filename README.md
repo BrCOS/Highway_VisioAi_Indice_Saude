@@ -46,8 +46,8 @@ Exibições principais:
 
 ### 1. Clone o Repositório
 ```bash
-git clone meu-repo.git
-cd meu-repo
+git clone https://github.com/BrCOS/Highway_VisioAi_Indice_Saude.git
+cd Highway_VisioAi (crie a pasta que preferir)
 ```
 
 ### 2. Crie um Ambiente Virtual Python
