@@ -1,44 +1,44 @@
-# 📊 Highway [VisioAi]: Índice de Saúde Financeira das Lojas HighWay  
+# 📊 Highway [VisioAi]: Índice de Saúde Financeira das Lojas HighWay
 
-## 🛠️ Objetivo  
-Este projeto trata os dados brutos e cria um **índice de saúde financeira** das lojas a partir de dados de diversas tabelas disponibilizadas em formato `.CSV` e colocadas no **Google BigQuery**.  
+## 🛠️ Objetivo
+Este projeto trata os dados brutos e cria um **índice de saúde financeira** das lojas a partir de dados de diversas tabelas disponibilizadas em formato `.CSV` e colocadas no **Google BigQuery**.
 
-O índice varia de **0 a 10** e combina métricas como:  
-- **Faturamento total**  
-- **Torque médio** (delivery e em loja)  
-- **Descontos aplicados**  
-- **Quantidade de itens vendidos**  
+O índice varia de **0 a 10** e combina métricas como:
+- **Faturamento total**
+- **Torque médio** (delivery e em loja)
+- **Descontos aplicados**
+- **Quantidade de itens vendidos**
 
-Este índice  alimenta um **dashboard no Looker Studio** que:  
-- Gera um **ranking de desempenho financeiro** das lojas.  
-- Identifica **situações de alerta** e **variáveis críticas** a melhorar.  
-- Fornece uma visão **simples e intuitiva** para gestores não técnicos (feito com a intenção de bater o olho e obter respostas dos pontos-chave).  
+Este índice  alimenta um **dashboard no Looker Studio** que:
+- Gera um **ranking de desempenho financeiro** das lojas.
+- Identifica **situações de alerta** e **variáveis críticas** a melhorar.
+- Fornece uma visão **simples e intuitiva** para gestores não técnicos (feito com a intenção de bater o olho e obter respostas dos pontos-chave).
 
 (Fluxo dos dados)
-CSV → BigQuery → Python ETL → Tabelas Finais → Looker Studio Dashboard
+CSV → BigQuery → Python ETL → Tabelas Finais → Looker Studio .
 
 ---
 
-## 🛠️ Ferramentas utilizadas  
+## 🛠️ Ferramentas utilizadas
 
-### 1. **BigQuery / SQL**  
-- Hospeda os dados brutos.  
-- Utilizado para integração com Python e Looker Studio.  
+### 1. **BigQuery / SQL**
+- Hospeda os dados brutos.
+- Utilizado para integração com Python e Looker Studio.
 
-### 2. **Python**  
-Usado para todo o **ETL**.  
+### 2. **Python**
+Usado para todo o **ETL**.
 
 Bibliotecas principais:  
-- **google-cloud-bigquery** -> Conexão com BigQuery.  
-- **pandas** -> Tratamento, Manipulação e padronização dos dados (limpeza, agregações, cálculos do índice e etc...).  
+- **google-cloud-bigquery** -> Conexão com BigQuery.
+- **pandas** -> Tratamento, Manipulação e padronização dos dados (limpeza, agregações, cálculos do índice e etc...).
 
-### 3. **Looker Studio**  
-Usado para **Visualização e Análise Interativa**.  
+### 3. **Looker Studio**
+Usado para **Visualização e Análise Interativa**.
 
 Exibições principais:  
-- **Índice de Saúde Geral** (Valores agrupados por loja).  
-- **Índice de Saúde Mensal** (Valores agrupados por período (mensal)).  
-- **Tabela Detalhada** (Tabela geral com que permite ir a fundo nos dados e filtrar conforme necessidade).  
+- **Índice de Saúde Geral** (Valores agrupados por loja).
+- **Índice de Saúde Mensal** (Valores agrupados por período (mensal)).
+- **Tabela Detalhada** (Tabela geral com que permite ir a fundo nos dados e filtrar conforme necessidade).
 
 ---
 
